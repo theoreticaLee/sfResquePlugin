@@ -19,8 +19,9 @@ class resqueWorkerTask extends sfBaseTask
     ));
     
     $this->addOptions(array(
+      new sfCommandOption('application', null, sfCommandOption::PARAMETER_REQUIRED, 'The application name', 'frontend'),
       new sfCommandOption('env', null, sfCommandOption::PARAMETER_REQUIRED, 'The environment', 'dev'),
-      new sfCommandOption('connection', null, sfCommandOption::PARAMETER_REQUIRED, 'The connection name', 'doctrine'),
+      new sfCommandOption('connection', null, sfCommandOption::PARAMETER_REQUIRED, 'The connection name', 'propel'),
       
       new sfCommandOption('interval', null, sfCommandOption::PARAMETER_OPTIONAL, '', 5),
       new sfCommandOption('count', null, sfCommandOption::PARAMETER_OPTIONAL, 'The number of workers to spawn', 1),
